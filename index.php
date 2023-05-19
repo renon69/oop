@@ -1,22 +1,25 @@
-<?php
+<?php 
 
-class Myclass{
+    class MyCar{
+     private $make;
+     private $model;
+     private $year;
 
-  public static $price = 2;
-  public  $color = 'red';
+      public function __construct($make, $model, $year){
+        $this->make = $make;
+        $this->model = $model;
+        $this->year = $year;
+      }
 
-  public static function random() {
-    return rand(0, 999);
-  }
+      public function displayInfo() {
 
-  public function get_total(){
-    $this->total = 10 * 30;
-  }
-  public function result(){
-    return $this->total;
-  }
-}
+          echo "make: ". $this->make ."<br>";
+          echo "model: ". $this->model ."<br>";
+          echo "year: ". $this->year ;
 
+      }
+    }
 
-
-echo $random ;
+    $car = new Mycar('HILLUX CONQUEST', 'TOYOTA', '2030');
+    $car->displayInfo();
+?>
